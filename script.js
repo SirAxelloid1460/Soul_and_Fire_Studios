@@ -206,7 +206,7 @@
   if (canvas && !prefersReduced) {
     const ctx = canvas.getContext('2d');
     let w, h, embers, raf;
-    const COLORS = ['#ff6b35', '#ff9e1b', '#ffce54', '#9b5de5'];
+    const COLORS = ['#ef5a23', '#f26b1f', '#f9a826', '#ffd24a'];
     const resize = () => { w = canvas.width = innerWidth; h = canvas.height = innerHeight; };
     const make = () => ({
       x: Math.random() * w, y: h + Math.random() * h,

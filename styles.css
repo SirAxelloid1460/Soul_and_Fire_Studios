@@ -3,17 +3,21 @@
    ============================================================ */
 
 :root {
-  --bg:        #0b0710;
-  --bg-soft:   #140d1c;
-  --bg-card:   #19101f;
-  --ink:       #f5eef2;
-  --ink-dim:   #b9aec0;
-  --ink-faint: #7d7388;
-  --fire:      #ff6b35;
-  --fire-2:    #ff9e1b;
-  --soul:      #9b5de5;
-  --soul-2:    #00bbf9;
-  --line:      rgba(255,255,255,.08);
+  /* Paleta derivada del logo: negro + fuego + acero */
+  --bg:        #08080a;   /* negro forja (fondo del logo) */
+  --bg-soft:   #121110;   /* carbón cálido */
+  --bg-card:   #181513;   /* carbón de forja */
+  --ink:       #f6f1ea;   /* blanco cálido (del wordmark) */
+  --ink-dim:   #b6ada3;
+  --ink-faint: #837a70;
+  --fire:      #ef5a23;   /* rojo-naranja de la llama */
+  --fire-2:    #f9a826;   /* dorado de las puntas */
+  --ember:     #c0392b;   /* rojo profundo del cuerpo de la llama */
+  --steel:     #c3ced6;   /* brillo de la espada */
+  --steel-2:   #8b98a2;   /* sombra del acero / ceniza */
+  --soul:      #c3ced6;   /* (legado) ahora acero */
+  --soul-2:    #8b98a2;
+  --line:      rgba(255,255,255,.07);
   --radius:    18px;
   --maxw:      1180px;
   --ease:      cubic-bezier(.16,1,.3,1);
@@ -147,6 +151,8 @@ body > *:not(#embers) { position: relative; z-index: 1; }
 .section__head { text-align: center; margin-bottom: 3.2rem; }
 .section__tag { display: inline-block; text-transform: uppercase; letter-spacing: .28em; font-size: .74rem; font-weight: 700; color: var(--fire-2); margin-bottom: .9rem; }
 .section__title { font-size: clamp(1.9rem, 4.5vw, 3rem); }
+/* divisor "filo forjado" bajo los títulos centrados */
+.section__head .section__title::after { content: ''; display: block; width: 64px; height: 3px; margin: 1.1rem auto 0; border-radius: 3px; background: linear-gradient(90deg, transparent, var(--fire), var(--fire-2), transparent); box-shadow: 0 0 14px rgba(239,90,35,.6); }
 .section__sub { color: var(--ink-dim); max-width: 580px; margin: 1rem auto 0; }
 
 .reveal { opacity: 0; transform: translateY(30px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
@@ -200,8 +206,8 @@ body > *:not(#embers) { position: relative; z-index: 1; }
 /* ---------- Team ---------- */
 .team__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem; }
 .member { text-align: center; background: var(--bg-soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 2rem 1rem; transition: transform .3s var(--ease), border-color .3s; }
-.member:hover { transform: translateY(-6px); border-color: rgba(155,93,229,.4); }
-.member__avatar { width: 84px; height: 84px; margin: 0 auto 1rem; border-radius: 50%; font-size: 2.4rem; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(255,107,53,.18), rgba(155,93,229,.18)); border: 1px solid var(--line); }
+.member:hover { transform: translateY(-6px); border-color: rgba(195,206,214,.35); }
+.member__avatar { width: 84px; height: 84px; margin: 0 auto 1rem; border-radius: 50%; font-size: 2.4rem; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(239,90,35,.2), rgba(195,206,214,.16)); border: 1px solid var(--line); }
 .member h3 { font-size: 1.1rem; margin-bottom: .25rem; font-family: 'Inter', sans-serif; font-weight: 600; }
 .member p { font-size: .85rem; color: var(--ink-faint); }
 
