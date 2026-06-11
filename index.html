@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=12" />
+  <link rel="stylesheet" href="styles.css?v=13" />
   <link rel="icon" type="image/png" href="assets/logo.png" />
 </head>
 <body>
@@ -26,10 +26,19 @@
     </a>
 
     <nav class="nav__links" id="navLinks" aria-label="Navegación principal">
-      <a href="#news">Noticias</a>
-      <a href="#nosotros">Nosotros</a>
+      <a href="#news" data-i18n="nav.news">Noticias</a>
+      <a href="#nosotros" data-i18n="nav.team">Nosotros</a>
       <a href="#patreon">Patreon</a>
-      <a href="#contact" class="nav__cta">Contacto</a>
+      <a href="#contact" class="nav__cta" data-i18n="nav.contact">Contacto</a>
+      <select id="langSelect" class="lang-select" aria-label="Idioma / Language">
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+        <option value="pt">PT</option>
+        <option value="fr">FR</option>
+        <option value="de">DE</option>
+        <option value="it">IT</option>
+        <option value="ja">JA</option>
+      </select>
     </nav>
 
     <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
@@ -42,10 +51,10 @@
     <div class="brandhero__inner">
       <img src="assets/logo.png" class="brandhero__emblem" alt="" width="160" height="160" />
       <img src="assets/logotitle.png" class="brandhero__wordmark" alt="Soul and Fire Studios" width="520" height="179" />
-      <p class="brandhero__tag">Estudio indie de videojuegos. Forjamos mundos con alma y fuego — nuevos proyectos muy pronto.</p>
+      <p class="brandhero__tag" data-i18n="hero.tag">Estudio indie de videojuegos. Forjamos mundos con alma y fuego — nuevos proyectos muy pronto.</p>
       <div class="brandhero__actions">
-        <a href="#nosotros" class="btn btn--primary">Conócenos</a>
-        <a href="#patreon" class="btn btn--ghost">Apóyanos en Patreon</a>
+        <a href="#nosotros" class="btn btn--primary" data-i18n="hero.cta1">Conócenos</a>
+        <a href="#patreon" class="btn btn--ghost" data-i18n="hero.cta2">Apóyanos en Patreon</a>
       </div>
     </div>
   </section>
@@ -184,21 +193,21 @@
   <!-- ===== NEWS ===== -->
   <section class="section news" id="news">
     <div class="section__head">
-      <span class="section__tag">Noticias</span>
-      <h2 class="section__title">Lo último del estudio</h2>
+      <span class="section__tag" data-i18n="news.tag">Noticias</span>
+      <h2 class="section__title" data-i18n="news.title">Lo último del estudio</h2>
     </div>
     <div class="news__empty">
       <p class="news__empty-emoji">🔥</p>
-      <p>Aún no hay noticias por aquí. Estamos forjando cosas nuevas: vuelve pronto o síguenos en nuestro <a href="#patreon">Patreon</a>.</p>
+      <p data-i18n="news.empty">Aún no hay noticias por aquí. Estamos forjando cosas nuevas — ¡vuelve pronto!</p>
     </div>
   </section>
 
   <!-- ===== NOSOTROS ===== -->
   <section class="section team" id="nosotros">
     <div class="section__head">
-      <span class="section__tag">Nosotros</span>
-      <h2 class="section__title">El equipo tras la llama</h2>
-      <p class="section__sub">El pequeño equipo apasionado que da vida a Soul and Fire Studios.</p>
+      <span class="section__tag" data-i18n="team.tag">Nosotros</span>
+      <h2 class="section__title" data-i18n="team.title">El equipo tras la llama</h2>
+      <p class="section__sub" data-i18n="team.sub">El pequeño equipo apasionado que da vida a Soul and Fire Studios.</p>
     </div>
     <div class="team__grid">
       <article class="member">
@@ -207,8 +216,8 @@
           <span class="member__ph">🦊</span>
         </div>
         <h3>SirAxelloid1460</h3>
-        <p class="member__role">Fundador · Programación</p>
-        <p class="member__bio">Dirige el estudio y programa el gameplay y los sistemas de los juegos.</p>
+        <p class="member__role" data-i18n="role.founder">Fundador · Programación</p>
+        <p class="member__bio" data-i18n="bio.founder">Dirige el estudio y programa el gameplay y los sistemas de los juegos.</p>
         <a class="member__link" href="https://www.patreon.com/cw/SirAxelloid1460" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="15.5" cy="9" r="6.5" fill="currentColor"/><rect x="2.5" y="2" width="3.6" height="20" rx="1" fill="currentColor"/></svg>
           Patreon ↗
@@ -220,8 +229,8 @@
           <span class="member__ph">👾</span>
         </div>
         <h3>FrogyDev</h3>
-        <p class="member__role">Pixel Art</p>
-        <p class="member__bio">Da vida al arte y las animaciones en pixel art de los proyectos.</p>
+        <p class="member__role" data-i18n="role.pixel">Pixel Art</p>
+        <p class="member__bio" data-i18n="bio.pixel">Da vida al arte y las animaciones en pixel art de los proyectos.</p>
         <a class="member__link" href="https://www.instagram.com/frogydev/" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
           @frogydev ↗
@@ -233,8 +242,8 @@
           <span class="member__ph">🖌️</span>
         </div>
         <h3>MonarkaTatto</h3>
-        <p class="member__role">Ilustración</p>
-        <p class="member__bio">Ilustra el arte de los proyectos que no son pixel art.</p>
+        <p class="member__role" data-i18n="role.illu">Ilustración</p>
+        <p class="member__bio" data-i18n="bio.illu">Ilustra el arte de los proyectos que no son pixel art.</p>
         <a class="member__link" href="https://www.instagram.com/monarka_tatto/" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
           @monarka_tatto ↗
@@ -246,8 +255,8 @@
           <span class="member__ph">✍️</span>
         </div>
         <h3>Hattergurl</h3>
-        <p class="member__role">Guion &amp; Narrativa</p>
-        <p class="member__bio">Escribe el lore, la trama y los diálogos de nuestros mundos.</p>
+        <p class="member__role" data-i18n="role.writer">Guion &amp; Narrativa</p>
+        <p class="member__bio" data-i18n="bio.writer">Escribe el lore, la trama y los diálogos de nuestros mundos.</p>
       </article>
     </div>
   </section>
@@ -403,12 +412,12 @@
   <section class="patreon" id="patreon">
     <div class="patreon__inner">
       <img src="assets/logo.png" class="patreon__logo" alt="" width="80" height="80" />
-      <span class="section__tag">Apóyanos</span>
-      <h2>Únete a nuestro Patreon</h2>
-      <p>Ayúdanos a seguir creando mundos con alma y fuego. Como mecenas tendrás adelantos exclusivos, betas, arte entre bastidores y mucho más.</p>
+      <span class="section__tag" data-i18n="patreon.tag">Apóyanos</span>
+      <h2 data-i18n="patreon.title">Únete a nuestro Patreon</h2>
+      <p data-i18n="patreon.text">Ayúdanos a seguir creando mundos con alma y fuego. Como mecenas tendrás adelantos exclusivos, betas, arte entre bastidores y mucho más.</p>
       <a class="btn btn--primary patreon__btn" href="https://www.patreon.com/cw/SyFStudio" target="_blank" rel="noopener noreferrer">
         <svg class="patreon__icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="15.5" cy="9" r="6.5" fill="currentColor"/><rect x="2.5" y="2" width="3.6" height="20" rx="1" fill="currentColor"/></svg>
-        Apóyanos en Patreon ↗
+        <span data-i18n="patreon.btn">Apóyanos en Patreon ↗</span>
       </a>
     </div>
   </section>
@@ -416,13 +425,13 @@
   <!-- ===== CONTACT ===== -->
   <section class="section contact" id="contact">
     <div class="contact__inner contact__inner--center">
-      <span class="section__tag">Contacto</span>
-      <h2 class="section__title">¿Hablamos?</h2>
-      <p>Prensa, colaboraciones o simplemente para saludar. Escríbenos por email o Instagram, o apóyanos en Patreon — ¡nos encanta conocer gente que ama los videojuegos tanto como nosotros!</p>
+      <span class="section__tag" data-i18n="contact.tag">Contacto</span>
+      <h2 class="section__title" data-i18n="contact.title">¿Hablamos?</h2>
+      <p data-i18n="contact.text">Prensa, colaboraciones o simplemente para saludar. Escríbenos por email o Instagram, o apóyanos en Patreon — ¡nos encanta conocer gente que ama los videojuegos tanto como nosotros!</p>
       <div class="contact__actions">
         <a class="btn btn--primary" href="mailto:soulandfirestudios@gmail.com?subject=Contacto%20desde%20la%20web" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-          Email
+          <span data-i18n="contact.email">Email</span>
         </a>
         <a class="btn btn--ghost" href="https://www.instagram.com/soul_and_fire_studios/" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
@@ -443,9 +452,9 @@
       <span class="nav__name">Soul <em>&amp;</em> Fire Studios</span>
     </div>
     <nav class="footer__links" aria-label="Enlaces del pie">
-      <a href="#news">Noticias</a><a href="#nosotros">Nosotros</a><a href="#patreon">Patreon</a><a href="#contact">Contacto</a>
+      <a href="#news" data-i18n="nav.news">Noticias</a><a href="#nosotros" data-i18n="nav.team">Nosotros</a><a href="#patreon">Patreon</a><a href="#contact" data-i18n="nav.contact">Contacto</a>
     </nav>
-    <p class="footer__copy">© <span id="year"></span> Soul and Fire Studios. Hecho con alma y fuego.</p>
+    <p class="footer__copy">© <span id="year"></span> Soul and Fire Studios. <span data-i18n="footer.tagline">Hecho con alma y fuego.</span></p>
   </footer>
 
   <!-- ===== TRAILER MODAL ===== -->
@@ -457,6 +466,7 @@
     </div>
   </div>
 
-  <script src="script.js?v=12"></script>
+  <script src="script.js?v=13"></script>
+  <script src="i18n.js?v=13"></script>
 </body>
 </html>

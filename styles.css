@@ -83,6 +83,10 @@ body > *:not(#embers) { position: relative; z-index: 1; }
 .nav__links a:not(.nav__cta):hover::after { width: 100%; }
 .nav__cta { padding: .55rem 1.2rem; border: 1px solid var(--line); border-radius: 100px; color: var(--ink); transition: border-color .2s, background .2s; }
 .nav__cta:hover { border-color: var(--fire); background: rgba(255,107,53,.1); }
+.lang-select { background: rgba(255,255,255,.05); color: var(--ink); border: 1px solid var(--line); border-radius: 100px; padding: .4rem .7rem; font-family: inherit; font-size: .82rem; font-weight: 600; cursor: pointer; transition: border-color .2s; }
+.lang-select:hover { border-color: var(--fire); }
+.lang-select:focus { outline: none; border-color: var(--fire); }
+.lang-select option { background: #14110f; color: var(--ink); }
 .nav__burger { display: none; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 6px; }
 .nav__burger span { width: 26px; height: 2px; background: var(--ink); border-radius: 2px; transition: transform .3s, opacity .3s; }
 .nav__burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
