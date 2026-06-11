@@ -31,14 +31,12 @@ Ubisoft y Team Cherry: oscuro, cinematográfico y centrado en el *key art*.
 ├── styles.css        # Estilos y tema visual
 ├── script.js         # Interactividad (carrusel, brasas, modal, formularios)
 ├── assets/
-│   └── logo.svg      # Emblema del estudio (vectorizado, usado en nav/footer/favicon)
+│   └── logo.png      # Emblema oficial del estudio (usado en nav/footer/newsletter/favicon)
 └── README.md
 ```
 
-> **Logo**: `assets/logo.svg` es una versión vectorizada del emblema de Soul and
-> Fire Studios (escala nítido a cualquier tamaño). Si quieres usar el archivo
-> original exacto, deja tu `logo.png` en `assets/` y cambia las referencias
-> `assets/logo.svg` por `assets/logo.png` en `index.html`.
+> **Logo**: `assets/logo.png` es el emblema oficial de Soul and Fire Studios
+> (fondo transparente). Se usa en el nav, el footer, la newsletter y el favicon.
 
 ## 🚀 Cómo verlo en local
 
