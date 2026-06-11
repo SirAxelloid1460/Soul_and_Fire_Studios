@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Soul and Fire Studios — estudio indie de videojuegos. Creamos mundos con alma y fuego." />
+  <meta name="theme-color" content="#0b0710" />
+  <meta property="og:title" content="Soul and Fire Studios" />
+  <meta property="og:description" content="Estudio indie de videojuegos. Mundos con alma y fuego." />
+  <meta property="og:type" content="website" />
+  <title>Soul and Fire Studios — Estudio Indie de Videojuegos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%A5%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <canvas id="embers" aria-hidden="true"></canvas>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__brand" aria-label="Soul and Fire Studios — inicio">
+      <span class="nav__flame">🔥</span>
+      <span class="nav__name">Soul <em>&amp;</em> Fire</span>
+    </a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Navegación principal">
+      <a href="#about">Estudio</a>
+      <a href="#games">Juegos</a>
+      <a href="#team">Equipo</a>
+      <a href="#news">Noticias</a>
+      <a href="#contact" class="nav__cta">Contacto</a>
+    </nav>
+
+    <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__glow"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Estudio Indie de Videojuegos</p>
+      <h1 class="hero__title">Mundos con <span class="grad">alma</span> y <span class="grad grad--fire">fuego</span></h1>
+      <p class="hero__sub">
+        Somos un pequeño estudio independiente que crea experiencias de juego con
+        narrativas profundas, arte hecho a mano y una pasión que arde sin apagarse.
+      </p>
+      <div class="hero__actions">
+        <a href="#games" class="btn btn--primary">Ver nuestros juegos</a>
+        <a href="#contact" class="btn btn--ghost">Trabaja con nosotros</a>
+      </div>
+      <div class="hero__stats">
+        <div><strong data-count="3">0</strong><span>Juegos en desarrollo</span></div>
+        <div><strong data-count="12">0</strong><span>Personas en el equipo</span></div>
+        <div><strong data-count="40">0</strong><span>Premios &amp; nominaciones</span></div>
+      </div>
+    </div>
+    <a href="#about" class="hero__scroll" aria-label="Desplázate hacia abajo">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about" id="about">
+    <div class="section__head">
+      <span class="section__tag">El estudio</span>
+      <h2 class="section__title">Hechos de pasión, forjados en fuego</h2>
+    </div>
+    <div class="about__grid">
+      <p class="about__lead">
+        Soul and Fire Studios nació de la idea de que los videojuegos pueden ser arte,
+        emoción y aventura al mismo tiempo. Trabajamos sin prisa pero sin pausa, cuidando
+        cada píxel y cada nota musical.
+      </p>
+      <div class="about__values">
+        <article class="value">
+          <span class="value__icon">🎨</span>
+          <h3>Arte con identidad</h3>
+          <p>Cada juego tiene su propio estilo visual, dibujado y animado a mano por nuestro equipo.</p>
+        </article>
+        <article class="value">
+          <span class="value__icon">📖</span>
+          <h3>Historias que importan</h3>
+          <p>Narrativas que se quedan contigo mucho después de soltar el mando.</p>
+        </article>
+        <article class="value">
+          <span class="value__icon">🤝</span>
+          <h3>Comunidad primero</h3>
+          <p>Escuchamos a nuestros jugadores y construimos junto a ellos.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GAMES ===== -->
+  <section class="section games" id="games">
+    <div class="section__head">
+      <span class="section__tag">Nuestros juegos</span>
+      <h2 class="section__title">Lo que estamos creando</h2>
+    </div>
+    <div class="games__grid">
+      <article class="game" style="--accent:#ff6b35">
+        <div class="game__art game__art--1"><span class="game__badge">Próximamente</span></div>
+        <div class="game__body">
+          <h3>Emberfall</h3>
+          <p class="game__genre">Action-RPG · Aventura</p>
+          <p class="game__desc">Un viaje a través de un reino moribundo donde la última llama de la humanidad depende de ti.</p>
+          <a href="#contact" class="game__link">Lista de espera →</a>
+        </div>
+      </article>
+
+      <article class="game" style="--accent:#9b5de5">
+        <div class="game__art game__art--2"><span class="game__badge">En desarrollo</span></div>
+        <div class="game__body">
+          <h3>Lanterns of Solace</h3>
+          <p class="game__genre">Narrativa · Puzzle</p>
+          <p class="game__desc">Guía a las almas perdidas de vuelta a casa en un mundo de luz, sombra y memoria.</p>
+          <a href="#contact" class="game__link">Saber más →</a>
+        </div>
+      </article>
+
+      <article class="game" style="--accent:#00bbf9">
+        <div class="game__art game__art--3"><span class="game__badge">Acceso anticipado</span></div>
+        <div class="game__body">
+          <h3>Ashen Skies</h3>
+          <p class="game__genre">Roguelite · Plataformas</p>
+          <p class="game__desc">Sube por torres infinitas envueltas en cenizas y descubre qué provocó el gran incendio.</p>
+          <a href="#contact" class="game__link">Jugar la demo →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== TEAM ===== -->
+  <section class="section team" id="team">
+    <div class="section__head">
+      <span class="section__tag">El equipo</span>
+      <h2 class="section__title">Las personas detrás de la llama</h2>
+    </div>
+    <div class="team__grid">
+      <article class="member"><div class="member__avatar">🦊</div><h3>Tu Nombre</h3><p>Fundador / Director creativo</p></article>
+      <article class="member"><div class="member__avatar">🐉</div><h3>Programación</h3><p>Gameplay &amp; sistemas</p></article>
+      <article class="member"><div class="member__avatar">🎨</div><h3>Arte</h3><p>Dirección artística</p></article>
+      <article class="member"><div class="member__avatar">🎵</div><h3>Audio</h3><p>Música &amp; sonido</p></article>
+    </div>
+  </section>
+
+  <!-- ===== NEWS ===== -->
+  <section class="section news" id="news">
+    <div class="section__head">
+      <span class="section__tag">Noticias</span>
+      <h2 class="section__title">Lo último del estudio</h2>
+    </div>
+    <div class="news__grid">
+      <article class="post">
+        <time>11 Jun 2026</time>
+        <h3>Anunciamos Emberfall</h3>
+        <p>Por fin podemos enseñaros en qué hemos estado trabajando en secreto durante el último año.</p>
+        <a href="#" class="post__link">Leer más →</a>
+      </article>
+      <article class="post">
+        <time>02 Jun 2026</time>
+        <h3>Ashen Skies llega a acceso anticipado</h3>
+        <p>La demo ya está disponible y queremos vuestro feedback para pulir el lanzamiento.</p>
+        <a href="#" class="post__link">Leer más →</a>
+      </article>
+      <article class="post">
+        <time>20 May 2026</time>
+        <h3>Estamos contratando</h3>
+        <p>Buscamos artistas y programadores que compartan nuestra pasión por los juegos con alma.</p>
+        <a href="#contact" class="post__link">Únete →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact">
+    <div class="contact__inner">
+      <div class="contact__text">
+        <span class="section__tag">Contacto</span>
+        <h2 class="section__title">¿Hablamos?</h2>
+        <p>Prensa, colaboraciones, oportunidades o simplemente para saludar. Nos encanta conocer gente que ama los videojuegos tanto como nosotros.</p>
+        <ul class="contact__socials">
+          <li><a href="#" aria-label="Discord">Discord</a></li>
+          <li><a href="#" aria-label="Steam">Steam</a></li>
+          <li><a href="#" aria-label="X / Twitter">X</a></li>
+          <li><a href="#" aria-label="YouTube">YouTube</a></li>
+        </ul>
+      </div>
+      <form class="contact__form" id="contactForm" novalidate>
+        <div class="field">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" required placeholder="¿Cómo te llamas?" />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="tu@email.com" />
+        </div>
+        <div class="field">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="4" required placeholder="Cuéntanos..."></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Enviar mensaje</button>
+        <p class="contact__note" id="formNote" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__top">
+      <span class="nav__flame">🔥</span>
+      <span class="nav__name">Soul <em>&amp;</em> Fire Studios</span>
+    </div>
+    <p class="footer__copy">© <span id="year"></span> Soul and Fire Studios. Hecho con alma y fuego.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
