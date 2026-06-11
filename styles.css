@@ -63,8 +63,9 @@ body > *:not(#embers) { position: relative; z-index: 1; }
   border-bottom: 1px solid transparent;
 }
 .nav.scrolled { background: rgba(11,7,16,.8); backdrop-filter: blur(14px); border-bottom-color: var(--line); padding-top: .7rem; padding-bottom: .7rem; }
-.nav__brand { display: flex; align-items: center; gap: .55rem; font-family: 'Cinzel', serif; font-weight: 700; font-size: 1.2rem; }
-.nav__flame { filter: drop-shadow(0 0 8px rgba(255,107,53,.8)); animation: flicker 3s infinite; }
+.nav__brand { display: flex; align-items: center; gap: .6rem; font-family: 'Cinzel', serif; font-weight: 700; font-size: 1.2rem; }
+.nav__logo { width: 32px; height: auto; animation: emblemPulse 3.6s ease-in-out infinite; }
+.nav.scrolled .nav__logo { width: 28px; }
 .nav__name em { color: var(--fire); font-style: normal; }
 .nav__links { display: flex; align-items: center; gap: 1.8rem; }
 .nav__links a { font-size: .95rem; color: var(--ink-dim); transition: color .2s; position: relative; }
@@ -238,7 +239,9 @@ body > *:not(#embers) { position: relative; z-index: 1; }
 
 /* ---------- Footer ---------- */
 .footer { text-align: center; padding: 3rem 1.5rem; border-top: 1px solid var(--line); margin-top: 2rem; }
-.footer__top { display: flex; align-items: center; justify-content: center; gap: .55rem; font-family: 'Cinzel', serif; font-weight: 700; font-size: 1.15rem; margin-bottom: 1rem; }
+.footer__top { display: flex; align-items: center; justify-content: center; gap: .7rem; font-family: 'Cinzel', serif; font-weight: 700; font-size: 1.15rem; margin-bottom: 1rem; }
+.footer__logo { width: 46px; height: auto; }
+.newsletter__logo { width: 70px; height: auto; margin: 0 auto 1rem; animation: emblemPulse 3.6s ease-in-out infinite; }
 .footer__links { display: flex; flex-wrap: wrap; gap: 1.4rem; justify-content: center; margin-bottom: 1rem; }
 .footer__links a { color: var(--ink-dim); font-size: .92rem; transition: color .2s; }
 .footer__links a:hover { color: var(--fire); }
@@ -258,7 +261,7 @@ body > *:not(#embers) { position: relative; z-index: 1; }
 .modal__poster p { color: rgba(255,255,255,.8); font-size: .95rem; }
 
 /* ---------- Animations ---------- */
-@keyframes flicker { 0%,100%{ transform: scale(1) rotate(-2deg);} 25%{ transform: scale(1.08) rotate(2deg);} 50%{ transform: scale(.96) rotate(-1deg);} 75%{ transform: scale(1.05) rotate(1deg);} }
+@keyframes emblemPulse { 0%,100%{ filter: drop-shadow(0 0 5px rgba(255,107,53,.45)); } 50%{ filter: drop-shadow(0 0 13px rgba(255,107,53,.85)); } }
 @keyframes rise { from { opacity: 0; transform: translateY(24px);} to { opacity: 1; transform: none;} }
 @keyframes fade { from { opacity: 0;} to { opacity: 1;} }
 

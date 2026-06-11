@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 300" role="img" aria-label="Soul and Fire Studios">
+  <defs>
+    <linearGradient id="flame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ef6a23"/>
+      <stop offset=".5" stop-color="#d8391b"/>
+      <stop offset="1" stop-color="#a5231a"/>
+    </linearGradient>
+    <linearGradient id="tip" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd24a"/>
+      <stop offset="1" stop-color="#ff9e1b"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e7eef3"/>
+      <stop offset=".5" stop-color="#bcc7cf"/>
+      <stop offset="1" stop-color="#8b98a2"/>
+    </linearGradient>
+  </defs>
+
+  <g stroke="#140d0a" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+    <!-- flame tongues (drawn behind the body, tips peek above) -->
+    <path d="M0 -58 C 13 -32 15 -6 0 2 C -15 -6 -13 -32 0 -58 Z" transform="translate(94 104) scale(.8) rotate(-12)" fill="url(#tip)"/>
+    <path d="M0 -58 C 13 -32 15 -6 0 2 C -15 -6 -13 -32 0 -58 Z" transform="translate(150 100) scale(.92) rotate(12)" fill="url(#tip)"/>
+    <path d="M0 -58 C 13 -32 15 -6 0 2 C -15 -6 -13 -32 0 -58 Z" transform="translate(120 92) scale(1.35)" fill="url(#tip)"/>
+
+    <!-- main flame body -->
+    <path d="M120 56 C 150 104 192 132 192 192 C 192 244 160 276 120 276 C 80 276 48 244 48 192 C 48 132 90 104 120 56 Z" fill="url(#flame)"/>
+
+    <!-- inner shading for depth -->
+    <path d="M120 112 C 142 140 176 158 176 198 C 176 240 150 266 120 266 C 90 266 64 240 64 198 C 64 158 98 140 120 112 Z" fill="#94190f" opacity=".45" stroke="none"/>
+
+    <!-- helmet brow (orange outline under, dark on top) -->
+    <path d="M82 148 L120 170 L158 148" fill="none" stroke="#ff9e1b" stroke-width="22"/>
+    <path d="M82 148 L120 170 L158 148" fill="none" stroke="#1c130d" stroke-width="13"/>
+
+    <!-- sword blade -->
+    <path d="M108 168 L132 168 L132 250 L120 276 L108 250 Z" fill="url(#steel)"/>
+  </g>
+
+  <!-- runes S · F -->
+  <g fill="#5f6f7d" stroke="none" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic">
+    <text x="120" y="208" font-size="17">S</text>
+    <circle cx="120" cy="223" r="2.4"/>
+    <text x="120" y="248" font-size="17">F</text>
+  </g>
+</svg>
