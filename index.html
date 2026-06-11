@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="stylesheet" href="styles.css?v=9" />
   <link rel="icon" type="image/png" href="assets/logo.png" />
 </head>
 <body>
@@ -209,6 +209,10 @@
         <h3>SirAxelloid1460</h3>
         <p class="member__role">Fundador · Programación</p>
         <p class="member__bio">Dirige el estudio y programa el gameplay y los sistemas de los juegos.</p>
+        <a class="member__link" href="https://www.patreon.com/cw/SirAxelloid1460" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="15.5" cy="9" r="6.5" fill="currentColor"/><rect x="2.5" y="2" width="3.6" height="20" rx="1" fill="currentColor"/></svg>
+          Patreon ↗
+        </a>
       </article>
       <article class="member">
         <div class="member__avatar">
@@ -218,6 +222,10 @@
         <h3>FrogyDev</h3>
         <p class="member__role">Pixel Art</p>
         <p class="member__bio">Da vida al arte y las animaciones en pixel art de los proyectos.</p>
+        <a class="member__link" href="https://www.instagram.com/frogydev/" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+          @frogydev ↗
+        </a>
       </article>
       <article class="member">
         <div class="member__avatar">
@@ -227,6 +235,10 @@
         <h3>MonarkaTatto</h3>
         <p class="member__role">Ilustración</p>
         <p class="member__bio">Ilustra el arte de los proyectos que no son pixel art.</p>
+        <a class="member__link" href="https://www.instagram.com/monarka_tatto/" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+          @monarka_tatto ↗
+        </a>
       </article>
       <article class="member">
         <div class="member__avatar">
@@ -403,34 +415,20 @@
 
   <!-- ===== CONTACT ===== -->
   <section class="section contact" id="contact">
-    <div class="contact__inner">
-      <div class="contact__text">
-        <span class="section__tag">Contacto</span>
-        <h2 class="section__title">¿Hablamos?</h2>
-        <p>Prensa, colaboraciones, oportunidades o simplemente para saludar. Nos encanta conocer gente que ama los videojuegos tanto como nosotros.</p>
-        <ul class="contact__socials">
-          <li><a href="#" aria-label="Discord">Discord</a></li>
-          <li><a href="#" aria-label="Steam">Steam</a></li>
-          <li><a href="#" aria-label="X / Twitter">X</a></li>
-          <li><a href="#" aria-label="YouTube">YouTube</a></li>
-        </ul>
+    <div class="contact__inner contact__inner--center">
+      <span class="section__tag">Contacto</span>
+      <h2 class="section__title">¿Hablamos?</h2>
+      <p>Prensa, colaboraciones o simplemente para saludar. Escríbenos por Instagram o apóyanos en Patreon — ¡nos encanta conocer gente que ama los videojuegos tanto como nosotros!</p>
+      <div class="contact__actions">
+        <a class="btn btn--primary" href="https://www.instagram.com/soul_and_fire_studios/" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+          Instagram ↗
+        </a>
+        <a class="btn btn--ghost" href="https://www.patreon.com/cw/SyFStudio" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="15.5" cy="9" r="6.5" fill="currentColor"/><rect x="2.5" y="2" width="3.6" height="20" rx="1" fill="currentColor"/></svg>
+          Patreon ↗
+        </a>
       </div>
-      <form class="contact__form" id="contactForm" novalidate>
-        <div class="field">
-          <label for="name">Nombre</label>
-          <input type="text" id="name" name="name" required placeholder="¿Cómo te llamas?" />
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required placeholder="tu@email.com" />
-        </div>
-        <div class="field">
-          <label for="message">Mensaje</label>
-          <textarea id="message" name="message" rows="4" required placeholder="Cuéntanos..."></textarea>
-        </div>
-        <button type="submit" class="btn btn--primary btn--full">Enviar mensaje</button>
-        <p class="contact__note" id="formNote" role="status"></p>
-      </form>
     </div>
   </section>
 
@@ -455,6 +453,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=8"></script>
+  <script src="script.js?v=9"></script>
 </body>
 </html>

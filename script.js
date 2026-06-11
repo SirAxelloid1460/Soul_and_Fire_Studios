@@ -164,25 +164,6 @@
     counters.forEach((c) => (c.textContent = c.dataset.count + (+c.dataset.count >= 40 ? '+' : '')));
   }
 
-  /* ---------- Forms (front-end only) ---------- */
-  const validEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
-
-  const cForm = $('#contactForm'), cNote = $('#formNote');
-  if (cForm) {
-    cForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = cForm.name.value.trim();
-      if (!name || !validEmail(cForm.email.value.trim()) || !cForm.message.value.trim()) {
-        cNote.textContent = 'Revisa los campos: nombre, un email válido y un mensaje.';
-        cNote.className = 'contact__note err';
-        return;
-      }
-      cNote.textContent = `¡Gracias, ${name}! Hemos recibido tu mensaje. Te responderemos pronto. 🔥`;
-      cNote.className = 'contact__note ok';
-      cForm.reset();
-    });
-  }
-
   /* ---------- Footer year ---------- */
   const yearEl = $('#year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
