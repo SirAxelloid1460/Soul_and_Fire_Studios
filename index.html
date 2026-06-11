@@ -11,7 +11,7 @@
   <title>Soul and Fire Studios — Estudio Indie de Videojuegos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%A5%3C/text%3E%3C/svg%3E" />
 </head>
@@ -20,16 +20,17 @@
 
   <!-- ===== NAV ===== -->
   <header class="nav" id="nav">
-    <a href="#hero" class="nav__brand" aria-label="Soul and Fire Studios — inicio">
+    <a href="#top" class="nav__brand" aria-label="Soul and Fire Studios — inicio">
       <span class="nav__flame">🔥</span>
       <span class="nav__name">Soul <em>&amp;</em> Fire</span>
     </a>
 
     <nav class="nav__links" id="navLinks" aria-label="Navegación principal">
-      <a href="#about">Estudio</a>
       <a href="#games">Juegos</a>
-      <a href="#team">Equipo</a>
+      <a href="#spotlight">Destacado</a>
       <a href="#news">Noticias</a>
+      <a href="#careers">Carreras</a>
+      <a href="#about">Estudio</a>
       <a href="#contact" class="nav__cta">Contacto</a>
     </nav>
 
@@ -38,60 +39,147 @@
     </button>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="hero">
-    <div class="hero__glow"></div>
-    <div class="hero__content">
-      <p class="hero__eyebrow">Estudio Indie de Videojuegos</p>
-      <h1 class="hero__title">Mundos con <span class="grad">alma</span> y <span class="grad grad--fire">fuego</span></h1>
-      <p class="hero__sub">
-        Somos un pequeño estudio independiente que crea experiencias de juego con
-        narrativas profundas, arte hecho a mano y una pasión que arde sin apagarse.
-      </p>
-      <div class="hero__actions">
-        <a href="#games" class="btn btn--primary">Ver nuestros juegos</a>
-        <a href="#contact" class="btn btn--ghost">Trabaja con nosotros</a>
-      </div>
-      <div class="hero__stats">
-        <div><strong data-count="3">0</strong><span>Juegos en desarrollo</span></div>
-        <div><strong data-count="12">0</strong><span>Personas en el equipo</span></div>
-        <div><strong data-count="40">0</strong><span>Premios &amp; nominaciones</span></div>
-      </div>
+  <!-- ===== HERO CAROUSEL ===== -->
+  <section class="hero" id="top" aria-roledescription="carrusel" aria-label="Juegos destacados">
+    <div class="hero__track" id="heroTrack">
+
+      <!-- Slide 1 — Emberfall -->
+      <article class="slide is-active" data-accent="#ff6b35">
+        <div class="slide__art">
+          <svg class="keyart" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#1a0a18"/><stop offset=".55" stop-color="#3a1320"/><stop offset="1" stop-color="#ff6b35"/>
+              </linearGradient>
+              <radialGradient id="sun1" cx="50%" cy="78%" r="40%">
+                <stop offset="0" stop-color="#ffce54"/><stop offset=".4" stop-color="#ff7a2f"/><stop offset="1" stop-color="#ff6b35" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="1440" height="900" fill="url(#sky1)"/>
+            <circle cx="720" cy="700" r="520" fill="url(#sun1)"/>
+            <path d="M0 560 L200 470 L360 540 L560 440 L760 520 L980 430 L1180 520 L1440 450 V900 H0Z" fill="#2a0e1a" opacity=".7"/>
+            <path d="M0 640 L240 560 L470 640 L700 540 L930 640 L1180 560 L1440 650 V900 H0Z" fill="#1c0913" opacity=".85"/>
+            <path d="M0 760 L260 690 L520 770 L820 680 L1120 780 L1440 700 V900 H0Z" fill="#0b0510"/>
+            <g transform="translate(720 690)" fill="#050208">
+              <path d="M-6 0 q-3 -34 4 -54 q7 20 4 54 Z"/>
+              <ellipse cx="0" cy="-58" rx="9" ry="11"/>
+              <path d="M3 -52 q22 -10 26 -34 q-8 26 -22 38 Z" fill="#ffb24d"/>
+            </g>
+          </svg>
+        </div>
+        <div class="slide__inner">
+          <p class="slide__eyebrow">Próximamente · Acción-RPG</p>
+          <h2 class="slide__title">Emberfall</h2>
+          <p class="slide__desc">Un viaje a través de un reino moribundo donde la última llama de la humanidad depende de ti.</p>
+          <ul class="platforms" aria-label="Plataformas">
+            <li>PC</li><li>Steam</li><li>PS5</li><li>Xbox</li><li>Switch</li>
+          </ul>
+          <div class="slide__actions">
+            <button class="btn btn--primary" data-trailer="Emberfall">▶ Ver tráiler</button>
+            <a href="#contact" class="btn btn--ghost">Añadir a deseados</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 2 — Lanterns of Solace -->
+      <article class="slide" data-accent="#9b5de5">
+        <div class="slide__art">
+          <svg class="keyart" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#0c0820"/><stop offset=".6" stop-color="#211641"/><stop offset="1" stop-color="#4b2a7a"/>
+              </linearGradient>
+              <radialGradient id="moon2" cx="50%" cy="32%" r="22%">
+                <stop offset="0" stop-color="#d9c8ff"/><stop offset="1" stop-color="#9b5de5" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="1440" height="900" fill="url(#sky2)"/>
+            <circle cx="720" cy="290" r="320" fill="url(#moon2)"/>
+            <circle cx="720" cy="280" r="86" fill="#e7ddff" opacity=".9"/>
+            <g fill="#00bbf9">
+              <circle cx="300" cy="220" r="2"/><circle cx="1180" cy="180" r="2.4"/><circle cx="980" cy="300" r="1.8"/><circle cx="520" cy="160" r="1.8"/><circle cx="160" cy="360" r="2"/>
+            </g>
+            <g>
+              <g transform="translate(360 520)"><rect x="-14" y="-20" width="28" height="34" rx="6" fill="#ffce54" opacity=".95"/><circle cx="0" cy="-3" r="9" fill="#fff4c2"/></g>
+              <g transform="translate(560 420)"><rect x="-12" y="-17" width="24" height="29" rx="5" fill="#ff9e1b" opacity=".95"/><circle cx="0" cy="-3" r="7" fill="#fff4c2"/></g>
+              <g transform="translate(940 470)"><rect x="-13" y="-18" width="26" height="31" rx="5" fill="#ffce54" opacity=".95"/><circle cx="0" cy="-3" r="8" fill="#fff4c2"/></g>
+              <g transform="translate(1120 560)"><rect x="-11" y="-15" width="22" height="26" rx="5" fill="#ff9e1b" opacity=".9"/><circle cx="0" cy="-2" r="6" fill="#fff4c2"/></g>
+            </g>
+            <path d="M0 720 L300 660 L640 730 L980 650 L1440 740 V900 H0Z" fill="#160d2e"/>
+            <path d="M0 820 L380 770 L760 830 L1120 780 L1440 840 V900 H0Z" fill="#0b0720"/>
+          </svg>
+        </div>
+        <div class="slide__inner">
+          <p class="slide__eyebrow">En desarrollo · Narrativa &amp; Puzzle</p>
+          <h2 class="slide__title">Lanterns of Solace</h2>
+          <p class="slide__desc">Guía a las almas perdidas de vuelta a casa en un mundo de luz, sombra y memoria.</p>
+          <ul class="platforms" aria-label="Plataformas">
+            <li>PC</li><li>Steam</li><li>Switch</li>
+          </ul>
+          <div class="slide__actions">
+            <button class="btn btn--primary" data-trailer="Lanterns of Solace">▶ Ver tráiler</button>
+            <a href="#news" class="btn btn--ghost">Saber más</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 3 — Ashen Skies -->
+      <article class="slide" data-accent="#00bbf9">
+        <div class="slide__art">
+          <svg class="keyart" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#04141f"/><stop offset=".55" stop-color="#0a3147"/><stop offset="1" stop-color="#0f6f86"/>
+              </linearGradient>
+              <radialGradient id="glow3" cx="68%" cy="40%" r="40%">
+                <stop offset="0" stop-color="#9be7ff" stop-opacity=".7"/><stop offset="1" stop-color="#00bbf9" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="1440" height="900" fill="url(#sky3)"/>
+            <rect width="1440" height="900" fill="url(#glow3)"/>
+            <g fill="#0a2738" opacity=".8">
+              <ellipse cx="300" cy="560" rx="220" ry="46"/><ellipse cx="1140" cy="500" rx="260" ry="52"/><ellipse cx="720" cy="640" rx="320" ry="60"/>
+            </g>
+            <g transform="translate(720 0)">
+              <path d="M-46 900 L-30 320 L0 250 L30 320 L46 900 Z" fill="#06222f"/>
+              <path d="M-30 320 L0 250 L30 320 Z" fill="#0a3a4f"/>
+              <rect x="-22" y="430" width="14" height="20" fill="#9be7ff" opacity=".8"/>
+              <rect x="8" y="500" width="14" height="20" fill="#9be7ff" opacity=".8"/>
+              <rect x="-10" y="380" width="14" height="20" fill="#9be7ff" opacity=".8"/>
+            </g>
+            <g fill="#04141f"><path d="M460 360 l18 -8 l-6 16 z"/><path d="M980 300 l18 -8 l-6 16 z"/><path d="M620 240 l14 -6 l-5 12 z"/></g>
+          </svg>
+        </div>
+        <div class="slide__inner">
+          <p class="slide__eyebrow">Acceso anticipado · Roguelite</p>
+          <h2 class="slide__title">Ashen Skies</h2>
+          <p class="slide__desc">Sube por torres infinitas envueltas en cenizas y descubre qué provocó el gran incendio.</p>
+          <ul class="platforms" aria-label="Plataformas">
+            <li>PC</li><li>Steam</li><li>Epic</li>
+          </ul>
+          <div class="slide__actions">
+            <button class="btn btn--primary" data-trailer="Ashen Skies">▶ Ver tráiler</button>
+            <a href="#contact" class="btn btn--ghost">Jugar la demo</a>
+          </div>
+        </div>
+      </article>
     </div>
-    <a href="#about" class="hero__scroll" aria-label="Desplázate hacia abajo">
-      <span></span>
-    </a>
+
+    <button class="hero__nav hero__nav--prev" id="heroPrev" aria-label="Anterior">‹</button>
+    <button class="hero__nav hero__nav--next" id="heroNext" aria-label="Siguiente">›</button>
+    <div class="hero__dots" id="heroDots" role="tablist" aria-label="Seleccionar juego"></div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
-  <section class="section about" id="about">
-    <div class="section__head">
-      <span class="section__tag">El estudio</span>
-      <h2 class="section__title">Hechos de pasión, forjados en fuego</h2>
-    </div>
-    <div class="about__grid">
-      <p class="about__lead">
-        Soul and Fire Studios nació de la idea de que los videojuegos pueden ser arte,
-        emoción y aventura al mismo tiempo. Trabajamos sin prisa pero sin pausa, cuidando
-        cada píxel y cada nota musical.
-      </p>
-      <div class="about__values">
-        <article class="value">
-          <span class="value__icon">🎨</span>
-          <h3>Arte con identidad</h3>
-          <p>Cada juego tiene su propio estilo visual, dibujado y animado a mano por nuestro equipo.</p>
-        </article>
-        <article class="value">
-          <span class="value__icon">📖</span>
-          <h3>Historias que importan</h3>
-          <p>Narrativas que se quedan contigo mucho después de soltar el mando.</p>
-        </article>
-        <article class="value">
-          <span class="value__icon">🤝</span>
-          <h3>Comunidad primero</h3>
-          <p>Escuchamos a nuestros jugadores y construimos junto a ellos.</p>
-        </article>
-      </div>
+  <!-- ===== STUDIO STRIP ===== -->
+  <section class="strip" id="about">
+    <p class="strip__lead">
+      Somos <strong>Soul&nbsp;and&nbsp;Fire&nbsp;Studios</strong>, un estudio indie que crea
+      experiencias con narrativas profundas, arte hecho a mano y una pasión que arde sin apagarse.
+    </p>
+    <div class="strip__stats">
+      <div><strong data-count="3">0</strong><span>Juegos en desarrollo</span></div>
+      <div><strong data-count="12">0</strong><span>Personas en el equipo</span></div>
+      <div><strong data-count="40">0</strong><span>Premios &amp; nominaciones</span></div>
     </div>
   </section>
 
@@ -99,37 +187,159 @@
   <section class="section games" id="games">
     <div class="section__head">
       <span class="section__tag">Nuestros juegos</span>
-      <h2 class="section__title">Lo que estamos creando</h2>
+      <h2 class="section__title">Mundos que estamos forjando</h2>
     </div>
     <div class="games__grid">
       <article class="game" style="--accent:#ff6b35">
-        <div class="game__art game__art--1"><span class="game__badge">Próximamente</span></div>
+        <div class="game__art">
+          <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="400" height="260" fill="#2a0e1a"/>
+            <circle cx="200" cy="220" r="150" fill="#ff7a2f" opacity=".55"/>
+            <path d="M0 170 L120 140 L220 175 L320 135 L400 165 V260 H0Z" fill="#160810"/>
+            <path d="M0 215 L140 185 L280 220 L400 195 V260 H0Z" fill="#0b0510"/>
+            <g transform="translate(200 195)" fill="#050208"><path d="M-4 0 q-2 -22 3 -36 q5 14 3 36Z"/><ellipse cx="0" cy="-38" rx="6" ry="8"/><path d="M2 -34 q15 -7 18 -23 q-6 18 -15 26Z" fill="#ffb24d"/></g>
+          </svg>
+          <span class="game__badge">Próximamente</span>
+        </div>
         <div class="game__body">
           <h3>Emberfall</h3>
           <p class="game__genre">Action-RPG · Aventura</p>
-          <p class="game__desc">Un viaje a través de un reino moribundo donde la última llama de la humanidad depende de ti.</p>
-          <a href="#contact" class="game__link">Lista de espera →</a>
+          <p class="game__desc">La última llama de la humanidad depende de ti en un reino que se apaga.</p>
+          <ul class="platforms platforms--sm"><li>PC</li><li>PS5</li><li>Xbox</li><li>Switch</li></ul>
+          <a href="#contact" class="game__link">Añadir a deseados →</a>
         </div>
       </article>
 
       <article class="game" style="--accent:#9b5de5">
-        <div class="game__art game__art--2"><span class="game__badge">En desarrollo</span></div>
+        <div class="game__art">
+          <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="400" height="260" fill="#1a1240"/>
+            <circle cx="200" cy="90" r="60" fill="#e7ddff" opacity=".9"/>
+            <g><rect x="100" y="150" width="20" height="24" rx="5" fill="#ffce54"/><rect x="250" y="120" width="18" height="22" rx="5" fill="#ff9e1b"/><rect x="310" y="165" width="16" height="20" rx="5" fill="#ffce54"/></g>
+            <path d="M0 205 L160 175 L320 210 L400 190 V260 H0Z" fill="#0b0720"/>
+          </svg>
+          <span class="game__badge">En desarrollo</span>
+        </div>
         <div class="game__body">
           <h3>Lanterns of Solace</h3>
           <p class="game__genre">Narrativa · Puzzle</p>
-          <p class="game__desc">Guía a las almas perdidas de vuelta a casa en un mundo de luz, sombra y memoria.</p>
-          <a href="#contact" class="game__link">Saber más →</a>
+          <p class="game__desc">Lleva a las almas perdidas de vuelta a casa entre luz, sombra y memoria.</p>
+          <ul class="platforms platforms--sm"><li>PC</li><li>Steam</li><li>Switch</li></ul>
+          <a href="#news" class="game__link">Saber más →</a>
         </div>
       </article>
 
       <article class="game" style="--accent:#00bbf9">
-        <div class="game__art game__art--3"><span class="game__badge">Acceso anticipado</span></div>
+        <div class="game__art">
+          <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="400" height="260" fill="#0a3147"/>
+            <g fill="#0a2738" opacity=".8"><ellipse cx="90" cy="170" rx="80" ry="18"/><ellipse cx="320" cy="150" rx="90" ry="20"/></g>
+            <path d="M186 260 L194 90 L200 70 L206 90 L214 260 Z" fill="#06222f"/>
+            <rect x="192" y="130" width="8" height="12" fill="#9be7ff"/><rect x="192" y="165" width="8" height="12" fill="#9be7ff"/>
+          </svg>
+          <span class="game__badge">Acceso anticipado</span>
+        </div>
         <div class="game__body">
           <h3>Ashen Skies</h3>
           <p class="game__genre">Roguelite · Plataformas</p>
-          <p class="game__desc">Sube por torres infinitas envueltas en cenizas y descubre qué provocó el gran incendio.</p>
+          <p class="game__desc">Asciende torres infinitas de ceniza y descubre el origen del gran incendio.</p>
+          <ul class="platforms platforms--sm"><li>PC</li><li>Steam</li><li>Epic</li></ul>
           <a href="#contact" class="game__link">Jugar la demo →</a>
         </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== SPOTLIGHT ===== -->
+  <section class="spotlight" id="spotlight">
+    <div class="spotlight__art">
+      <svg viewBox="0 0 720 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="spSky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#1a0a18"/><stop offset=".55" stop-color="#3a1320"/><stop offset="1" stop-color="#ff6b35"/>
+          </linearGradient>
+          <radialGradient id="spSun" cx="50%" cy="72%" r="42%">
+            <stop offset="0" stop-color="#ffce54"/><stop offset=".5" stop-color="#ff7a2f"/><stop offset="1" stop-color="#ff6b35" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="720" height="560" fill="url(#spSky)"/>
+        <circle cx="360" cy="400" r="300" fill="url(#spSun)"/>
+        <path d="M0 320 L120 270 L260 320 L400 250 L540 320 L720 270 V560 H0Z" fill="#2a0e1a" opacity=".7"/>
+        <path d="M0 390 L160 340 L340 400 L520 330 L720 400 V560 H0Z" fill="#1c0913" opacity=".9"/>
+        <path d="M0 470 L200 420 L420 480 L640 410 L720 450 V560 H0Z" fill="#0b0510"/>
+        <g transform="translate(360 410)" fill="#050208"><path d="M-5 0 q-3 -28 3 -45 q6 17 4 45Z"/><ellipse cx="0" cy="-48" rx="8" ry="10"/><path d="M3 -44 q18 -9 22 -29 q-7 22 -19 32Z" fill="#ffb24d"/></g>
+      </svg>
+    </div>
+    <div class="spotlight__body">
+      <span class="section__tag">Juego destacado</span>
+      <h2 class="section__title">Emberfall</h2>
+      <p class="spotlight__desc">
+        Nuestro proyecto más ambicioso. Un action-RPG de mundo abierto donde cada brasa que
+        enciendes cambia el destino de un reino al borde de la oscuridad.
+      </p>
+      <ul class="features">
+        <li>🗺️ Mundo abierto pintado a mano, vivo y reactivo.</li>
+        <li>⚔️ Combate ágil donde el fuego es tu mejor arma y tu mayor riesgo.</li>
+        <li>📖 Una historia ramificada con decisiones que importan de verdad.</li>
+        <li>🎶 Banda sonora orquestal original.</li>
+      </ul>
+      <div class="slide__actions">
+        <button class="btn btn--primary" data-trailer="Emberfall">▶ Ver tráiler</button>
+        <a href="#contact" class="btn btn--ghost">Añadir a deseados</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWS ===== -->
+  <section class="section news" id="news">
+    <div class="section__head">
+      <span class="section__tag">Noticias</span>
+      <h2 class="section__title">Lo último del estudio</h2>
+    </div>
+    <div class="news__grid">
+      <article class="post">
+        <time>11 Jun 2026</time>
+        <h3>Anunciamos Emberfall</h3>
+        <p>Por fin podemos enseñaros en qué hemos estado trabajando en secreto durante el último año.</p>
+        <a href="#spotlight" class="post__link">Leer más →</a>
+      </article>
+      <article class="post">
+        <time>02 Jun 2026</time>
+        <h3>Ashen Skies llega a acceso anticipado</h3>
+        <p>La demo ya está disponible y queremos vuestro feedback para pulir el lanzamiento.</p>
+        <a href="#games" class="post__link">Leer más →</a>
+      </article>
+      <article class="post">
+        <time>20 May 2026</time>
+        <h3>Estamos contratando</h3>
+        <p>Buscamos artistas y programadores que compartan nuestra pasión por los juegos con alma.</p>
+        <a href="#careers" class="post__link">Únete →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== CAREERS ===== -->
+  <section class="section careers" id="careers">
+    <div class="section__head">
+      <span class="section__tag">Únete a la llama</span>
+      <h2 class="section__title">Trabaja con nosotros</h2>
+      <p class="section__sub">Estudio remoto, horizontal y con muchísima pasión. Si te emociona crear juegos con alma, queremos conocerte.</p>
+    </div>
+    <div class="careers__grid">
+      <article class="job">
+        <div class="job__top"><h3>Programador/a Gameplay</h3><span class="job__type">Remoto · Full-time</span></div>
+        <p>Unity / C#. Diseñas y construyes sistemas de combate y mundo para Emberfall.</p>
+        <a href="#contact" class="game__link">Aplicar →</a>
+      </article>
+      <article class="job">
+        <div class="job__top"><h3>Artista 2D / Animación</h3><span class="job__type">Remoto · Full-time</span></div>
+        <p>Defines el look hecho a mano de nuestros mundos. Portfolio imprescindible.</p>
+        <a href="#contact" class="game__link">Aplicar →</a>
+      </article>
+      <article class="job">
+        <div class="job__top"><h3>Diseñador/a de Niveles</h3><span class="job__type">Remoto · Contrato</span></div>
+        <p>Conviertes ideas en espacios jugables memorables y bien ritmados.</p>
+        <a href="#contact" class="game__link">Aplicar →</a>
       </article>
     </div>
   </section>
@@ -148,31 +358,16 @@
     </div>
   </section>
 
-  <!-- ===== NEWS ===== -->
-  <section class="section news" id="news">
-    <div class="section__head">
-      <span class="section__tag">Noticias</span>
-      <h2 class="section__title">Lo último del estudio</h2>
-    </div>
-    <div class="news__grid">
-      <article class="post">
-        <time>11 Jun 2026</time>
-        <h3>Anunciamos Emberfall</h3>
-        <p>Por fin podemos enseñaros en qué hemos estado trabajando en secreto durante el último año.</p>
-        <a href="#" class="post__link">Leer más →</a>
-      </article>
-      <article class="post">
-        <time>02 Jun 2026</time>
-        <h3>Ashen Skies llega a acceso anticipado</h3>
-        <p>La demo ya está disponible y queremos vuestro feedback para pulir el lanzamiento.</p>
-        <a href="#" class="post__link">Leer más →</a>
-      </article>
-      <article class="post">
-        <time>20 May 2026</time>
-        <h3>Estamos contratando</h3>
-        <p>Buscamos artistas y programadores que compartan nuestra pasión por los juegos con alma.</p>
-        <a href="#contact" class="post__link">Únete →</a>
-      </article>
+  <!-- ===== NEWSLETTER ===== -->
+  <section class="newsletter">
+    <div class="newsletter__inner">
+      <h2>No te pierdas ni una chispa 🔥</h2>
+      <p>Anuncios, betas y acceso anticipado directos a tu correo. Sin spam.</p>
+      <form class="newsletter__form" id="newsletterForm" novalidate>
+        <input type="email" id="nlEmail" placeholder="tu@email.com" aria-label="Tu email" required />
+        <button type="submit" class="btn btn--primary">Suscribirme</button>
+      </form>
+      <p class="newsletter__note" id="nlNote" role="status"></p>
     </div>
   </section>
 
@@ -215,8 +410,20 @@
       <span class="nav__flame">🔥</span>
       <span class="nav__name">Soul <em>&amp;</em> Fire Studios</span>
     </div>
+    <nav class="footer__links" aria-label="Enlaces del pie">
+      <a href="#games">Juegos</a><a href="#news">Noticias</a><a href="#careers">Carreras</a><a href="#contact">Contacto</a>
+    </nav>
     <p class="footer__copy">© <span id="year"></span> Soul and Fire Studios. Hecho con alma y fuego.</p>
   </footer>
+
+  <!-- ===== TRAILER MODAL ===== -->
+  <div class="modal" id="trailerModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Tráiler">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__box">
+      <button class="modal__close" data-close aria-label="Cerrar">✕</button>
+      <div class="modal__video" id="modalVideo"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

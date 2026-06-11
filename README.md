@@ -4,14 +4,24 @@ Sitio web del estudio indie de videojuegos **Soul and Fire Studios**. Hecho con
 HTML, CSS y JavaScript puro (sin frameworks ni paso de build), así que es rápido,
 ligero y fácil de publicar en cualquier sitio.
 
+Inspirado en el lenguaje visual de estudios como Rockstar, Bethesda, Blizzard,
+Ubisoft y Team Cherry: oscuro, cinematográfico y centrado en el *key art*.
+
 ## 🔥 Características
 
-- Diseño moderno, oscuro y responsive (móvil, tablet y escritorio).
-- Animación de brasas (`<canvas>`) acorde al nombre del estudio.
-- Secciones: Hero, Estudio, Juegos, Equipo, Noticias y Contacto.
-- Menú móvil, contadores animados, animaciones al hacer scroll.
-- Respeta `prefers-reduced-motion` (accesibilidad).
-- Formulario de contacto con validación en el navegador.
+- **Carrusel héroe cinemático** con un juego destacado por slide (auto-avance,
+  flechas, puntos, swipe en móvil y navegación por teclado).
+- ***Key art* atmosférico en SVG** — ilustraciones hechas con código, sin
+  imágenes externas: el sitio es 100% autocontenido y ligero.
+- **Badges de plataforma** (PC, Steam, PS5, Xbox, Switch, Epic).
+- **Spotlight** de juego destacado al estilo AAA (arte + características).
+- **Modal de tráiler** (listo para incrustar un vídeo de YouTube).
+- **Sección de Carreras/Reclutamiento** con ofertas de empleo.
+- **Newsletter** + formulario de contacto con validación en el navegador.
+- Secciones: Héroe, Estudio, Juegos, Destacado, Noticias, Carreras, Equipo,
+  Newsletter y Contacto.
+- Animación de brasas (`<canvas>`), contadores y *reveal* al hacer scroll.
+- Diseño responsive (móvil, tablet, escritorio). Respeta `prefers-reduced-motion`.
 
 ## 📁 Estructura
 
@@ -37,15 +47,19 @@ python3 -m http.server 8000
 
 Todo el contenido está en `index.html` en español y es fácil de editar:
 
-- **Nombre y juegos**: busca las secciones `<!-- ===== GAMES ===== -->` y
-  `<!-- ===== TEAM ===== -->` y cambia los textos por los tuyos.
-- **Colores**: en `styles.css`, arriba del todo, en `:root` están las variables
-  (`--fire`, `--soul`, etc.).
-- **Imágenes**: los juegos usan gradientes como placeholder. Para usar capturas
-  reales, reemplaza `.game__art--1/2/3` en `styles.css` por
-  `background-image: url('ruta/a/imagen.jpg')`.
-- **Redes sociales**: actualiza los enlaces `href="#"` en la sección de contacto
-  y el footer.
+- **Juegos del carrusel**: cada slide es un `<article class="slide">` dentro de
+  `#heroTrack`. Cambia título, descripción, plataformas y el atributo
+  `data-accent` (color del juego).
+- **Tráilers**: en `script.js`, en el objeto `TRAILERS`, asocia el título del
+  juego a un ID de YouTube (ej. `'Emberfall': 'dQw4w9WgXcQ'`) y el modal lo
+  incrustará automáticamente. Sin ID, muestra un póster "próximamente".
+- ***Key art*** : las ilustraciones son SVG inline dentro del HTML. Para usar
+  arte real, sustituye el `<svg>` de un slide/tarjeta por
+  `<img src="ruta/a/keyart.jpg" alt="" />`.
+- **Colores**: en `styles.css`, en `:root`, están las variables (`--fire`,
+  `--soul`, etc.).
+- **Ofertas de empleo**: edita la sección `<!-- ===== CAREERS ===== -->`.
+- **Redes sociales**: actualiza los enlaces `href="#"` en Contacto y el footer.
 
 ## 📨 Formulario de contacto
 
