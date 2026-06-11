@@ -30,7 +30,8 @@
   const slides = $$('.slide');
   const track = $('#heroTrack');
   const dotsWrap = $('#heroDots');
-  if (slides.length) {
+  // Solo arranca el carrusel si está visible (no cuando .hero está oculto)
+  if (slides.length && track && track.offsetParent !== null) {
     let idx = 0;
     let timer = null;
     const DELAY = 6500;

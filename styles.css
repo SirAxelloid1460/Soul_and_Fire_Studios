@@ -140,6 +140,16 @@ body > *:not(#embers) { position: relative; z-index: 1; }
 .hero__dots button { width: 32px; height: 4px; border-radius: 4px; border: 0; background: rgba(255,255,255,.3); cursor: pointer; transition: background .3s, width .3s; padding: 0; }
 .hero__dots button[aria-selected="true"] { background: var(--fire); width: 52px; }
 
+/* ---------- Brand hero (cabecera de marca, sustituye al carrusel) ---------- */
+.brandhero { position: relative; min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8rem clamp(1.2rem, 5vw, 3rem) 5rem; }
+.brandhero::before { content: ''; position: absolute; top: 44%; left: 50%; transform: translate(-50%, -50%); width: 580px; height: 580px; max-width: 92vw; border-radius: 50%; background: radial-gradient(circle, rgba(239,90,35,.22), rgba(249,168,38,.08) 45%, transparent 70%); filter: blur(20px); z-index: 0; animation: breathe 8s ease-in-out infinite; }
+.brandhero__inner { position: relative; z-index: 1; max-width: 720px; display: flex; flex-direction: column; align-items: center; gap: 1.3rem; }
+.brandhero__emblem { width: clamp(112px, 18vw, 168px); height: auto; animation: emblemPulse 3.6s ease-in-out infinite; }
+.brandhero__wordmark { width: clamp(260px, 52vw, 520px); height: auto; }
+.brandhero__tag { color: var(--ink-dim); font-size: clamp(1rem, 2.2vw, 1.25rem); max-width: 560px; }
+.brandhero__actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: .4rem; }
+@keyframes breathe { 0%,100%{ opacity: .85; transform: translate(-50%,-50%) scale(1); } 50%{ opacity: 1; transform: translate(-50%,-50%) scale(1.08); } }
+
 /* ---------- Studio strip ---------- */
 .strip {
   max-width: var(--maxw); margin: 0 auto; padding: clamp(3rem, 8vw, 5rem) clamp(1.2rem, 5vw, 3rem);

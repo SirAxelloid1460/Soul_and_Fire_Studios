@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="styles.css?v=4" />
   <link rel="icon" type="image/png" href="assets/logo.png" />
 </head>
 <body>
@@ -37,8 +37,21 @@
     </button>
   </header>
 
-  <!-- ===== HERO CAROUSEL ===== -->
-  <section class="hero" id="top" aria-roledescription="carrusel" aria-label="Juegos destacados">
+  <!-- ===== BRAND HERO ===== -->
+  <section class="brandhero" id="top">
+    <div class="brandhero__inner">
+      <img src="assets/logo.png" class="brandhero__emblem" alt="" width="160" height="160" />
+      <img src="assets/logotitle.png" class="brandhero__wordmark" alt="Soul and Fire Studios" width="520" height="179" />
+      <p class="brandhero__tag">Estudio indie de videojuegos. Forjamos mundos con alma y fuego — nuevos proyectos muy pronto.</p>
+      <div class="brandhero__actions">
+        <a href="#nosotros" class="btn btn--primary">Conócenos</a>
+        <a href="#patreon" class="btn btn--ghost">Apóyanos en Patreon</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HERO CAROUSEL (oculto) ===== -->
+  <section class="hero is-hidden" id="games-carousel" aria-roledescription="carrusel" aria-label="Juegos destacados">
     <div class="hero__track" id="heroTrack">
 
       <!-- Slide 1 — Emberfall -->
@@ -458,6 +471,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
