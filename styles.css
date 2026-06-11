@@ -219,10 +219,11 @@ body > *:not(#embers) { position: relative; z-index: 1; }
 .job p { color: var(--ink-dim); font-size: .94rem; margin-bottom: 1rem; }
 
 /* ---------- Team ---------- */
-.team__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem; }
+.team__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; max-width: 880px; margin: 0 auto; }
 .member { text-align: center; background: var(--bg-soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 2rem 1rem; transition: transform .3s var(--ease), border-color .3s; }
 .member:hover { transform: translateY(-6px); border-color: rgba(195,206,214,.35); }
-.member__avatar { width: 84px; height: 84px; margin: 0 auto 1rem; border-radius: 50%; font-size: 2.4rem; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(239,90,35,.2), rgba(195,206,214,.16)); border: 1px solid var(--line); }
+.member__avatar { position: relative; overflow: hidden; width: 84px; height: 84px; margin: 0 auto 1rem; border-radius: 50%; font-size: 2.4rem; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(239,90,35,.2), rgba(195,206,214,.16)); border: 1px solid var(--line); }
+.member__avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .member h3 { font-size: 1.1rem; margin-bottom: .35rem; font-family: 'Inter', sans-serif; font-weight: 600; }
 .member p { font-size: .85rem; color: var(--ink-faint); }
 .member .member__role { color: var(--fire-2); text-transform: uppercase; letter-spacing: .08em; font-size: .76rem; font-weight: 600; margin-bottom: .5rem; }
