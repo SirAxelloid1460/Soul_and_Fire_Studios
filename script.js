@@ -183,21 +183,6 @@
     });
   }
 
-  const nForm = $('#newsletterForm'), nNote = $('#nlNote');
-  if (nForm) {
-    nForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      if (!validEmail($('#nlEmail').value.trim())) {
-        nNote.textContent = 'Introduce un email válido.';
-        nNote.className = 'newsletter__note err';
-        return;
-      }
-      nNote.textContent = '¡Listo! Bienvenido/a a la comunidad. 🔥';
-      nNote.className = 'newsletter__note ok';
-      nForm.reset();
-    });
-  }
-
   /* ---------- Footer year ---------- */
   const yearEl = $('#year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
