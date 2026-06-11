@@ -70,6 +70,8 @@ body > *:not(#embers) { position: relative; z-index: 1; }
 .nav__brand { display: flex; align-items: center; gap: .6rem; font-family: 'Cinzel', serif; font-weight: 700; font-size: 1.2rem; }
 .nav__logo { width: 42px; height: auto; animation: emblemPulse 3.6s ease-in-out infinite; }
 .nav.scrolled .nav__logo { width: 36px; }
+.nav__wordmark { height: 38px; width: auto; transition: height .3s; }
+.nav.scrolled .nav__wordmark { height: 32px; }
 .nav__name em { color: var(--fire); font-style: normal; }
 .nav__links { display: flex; align-items: center; gap: 1.8rem; }
 .nav__links a { font-size: .95rem; color: var(--ink-dim); transition: color .2s; position: relative; }
