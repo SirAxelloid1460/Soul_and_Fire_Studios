@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=6" />
+  <link rel="stylesheet" href="styles.css?v=7" />
   <link rel="icon" type="image/png" href="assets/logo.png" />
 </head>
 <body>
@@ -26,8 +26,8 @@
     </a>
 
     <nav class="nav__links" id="navLinks" aria-label="Navegación principal">
-      <a href="#nosotros">Nosotros</a>
       <a href="#news">Noticias</a>
+      <a href="#nosotros">Nosotros</a>
       <a href="#patreon">Patreon</a>
       <a href="#contact" class="nav__cta">Contacto</a>
     </nav>
@@ -179,6 +179,18 @@
     <button class="hero__nav hero__nav--prev" id="heroPrev" aria-label="Anterior">‹</button>
     <button class="hero__nav hero__nav--next" id="heroNext" aria-label="Siguiente">›</button>
     <div class="hero__dots" id="heroDots" role="tablist" aria-label="Seleccionar juego"></div>
+  </section>
+
+  <!-- ===== NEWS ===== -->
+  <section class="section news" id="news">
+    <div class="section__head">
+      <span class="section__tag">Noticias</span>
+      <h2 class="section__title">Lo último del estudio</h2>
+    </div>
+    <div class="news__empty">
+      <p class="news__empty-emoji">🔥</p>
+      <p>Aún no hay noticias por aquí. Estamos forjando cosas nuevas: vuelve pronto o síguenos en nuestro <a href="#patreon">Patreon</a>.</p>
+    </div>
   </section>
 
   <!-- ===== NOSOTROS ===== -->
@@ -348,33 +360,6 @@
     </div>
   </section>
 
-  <!-- ===== NEWS ===== -->
-  <section class="section news" id="news">
-    <div class="section__head">
-      <span class="section__tag">Noticias</span>
-      <h2 class="section__title">Lo último del estudio</h2>
-    </div>
-    <div class="news__grid">
-      <article class="post">
-        <time>11 Jun 2026</time>
-        <h3>Anunciamos Emberfall</h3>
-        <p>Por fin podemos enseñaros en qué hemos estado trabajando en secreto durante el último año.</p>
-        <a href="#top" class="post__link">Leer más →</a>
-      </article>
-      <article class="post">
-        <time>02 Jun 2026</time>
-        <h3>Ashen Skies llega a acceso anticipado</h3>
-        <p>La demo ya está disponible y queremos vuestro feedback para pulir el lanzamiento.</p>
-        <a href="#top" class="post__link">Leer más →</a>
-      </article>
-      <article class="post">
-        <time>20 May 2026</time>
-        <h3>Estamos contratando</h3>
-        <p>Buscamos artistas y programadores que compartan nuestra pasión por los juegos con alma.</p>
-        <a href="#contact" class="post__link">Únete →</a>
-      </article>
-    </div>
-  </section>
 
   <!-- ===== CAREERS (oculto) ===== -->
   <section class="section careers is-hidden" id="careers">
@@ -469,7 +454,7 @@
       <span class="nav__name">Soul <em>&amp;</em> Fire Studios</span>
     </div>
     <nav class="footer__links" aria-label="Enlaces del pie">
-      <a href="#nosotros">Nosotros</a><a href="#news">Noticias</a><a href="#patreon">Patreon</a><a href="#contact">Contacto</a>
+      <a href="#news">Noticias</a><a href="#nosotros">Nosotros</a><a href="#patreon">Patreon</a><a href="#contact">Contacto</a>
     </nav>
     <p class="footer__copy">© <span id="year"></span> Soul and Fire Studios. Hecho con alma y fuego.</p>
   </footer>
@@ -483,6 +468,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=6"></script>
+  <script src="script.js?v=7"></script>
 </body>
 </html>

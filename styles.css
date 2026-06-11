@@ -208,6 +208,10 @@ body > *:not(#embers) { position: relative; z-index: 1; }
 .post p { color: var(--ink-dim); font-size: .94rem; margin-bottom: 1rem; }
 .post__link { font-weight: 600; color: var(--fire-2); }
 .post__link:hover { text-decoration: underline; }
+.news__empty { max-width: 620px; margin: 0 auto; text-align: center; background: var(--bg-card); border: 1px dashed var(--line); border-radius: var(--radius); padding: 2.6rem 2rem; }
+.news__empty-emoji { font-size: 2rem; margin-bottom: .6rem; }
+.news__empty p { color: var(--ink-dim); }
+.news__empty a { color: var(--fire-2); font-weight: 600; }
 
 /* ---------- Careers ---------- */
 .careers__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
