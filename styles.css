@@ -227,7 +227,7 @@ body > *:not(#embers) { position: relative; z-index: 1; }
 .job p { color: var(--ink-dim); font-size: .94rem; margin-bottom: 1rem; }
 
 /* ---------- Team ---------- */
-.team__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem; }
+.team__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 260px)); gap: 1.4rem; justify-content: center; }
 .member { text-align: center; background: var(--bg-soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 2rem 1rem; transition: transform .3s var(--ease), border-color .3s; display: flex; flex-direction: column; }
 .member:hover { transform: translateY(-6px); border-color: rgba(195,206,214,.35); }
 .member__avatar { flex: 0 0 auto; position: relative; overflow: hidden; width: 84px; height: 84px; margin: 0 auto 1rem; border-radius: 50%; font-size: 2.4rem; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(239,90,35,.2), rgba(195,206,214,.16)); border: 1px solid var(--line); }
@@ -327,7 +327,6 @@ body > *:not(#embers) { position: relative; z-index: 1; }
   .games__grid, .news__grid, .careers__grid { grid-template-columns: 1fr; }
   .spotlight, .contact__inner { grid-template-columns: 1fr; }
   .spotlight__art { order: -1; }
-  .team__grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 560px) {
   .team__grid { grid-template-columns: 1fr; }
